@@ -21,6 +21,10 @@ const TodoApp = () => {
     }
   }, [dispatch])
 
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  },[todos])
+
 }
 
 export default TodoApp;
